@@ -1,6 +1,6 @@
 package Task;
 
-public enum Type {
+public enum Type implements java.lang.reflect.Type {
     WORK("рабочая"),
     PERSONAL("личная"),
     DEFAULT("Дефолт");
@@ -20,4 +20,8 @@ public enum Type {
         this.type=type;
     }
 
+    @Override
+    public String getTypeName() {
+        return java.lang.reflect.Type.super.getTypeName();
+    }
 }
